@@ -1,0 +1,43 @@
+
+:root {
+    --color-primario: #0D1A34;
+    --color-secundario: #27B99A;
+    --color-light1: #435f7a;
+    --color-light2: #32465a;
+    --color-white: #ffffff;
+    --color-ausente: #f1c40f;
+    --color-desconectado: #95a5a6;
+    --color-en-linea: #2ecc71;
+    --color-error: #e74c3c;
+    --color-neutro: #bbbbbb;
+    --color-black: #000000;
+
+    --transition150: all 150ms;
+    --transition300: all 300ms;
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Titillium Web', sans-serif;
+    color: var(--color-white);
+}
+
+
+html,
+body {
+    margin: 0;
+}
+
+img {
+    text-align: center;
+}
+
+p {
+    margin: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
