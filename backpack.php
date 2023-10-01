@@ -23,6 +23,7 @@
                 </div>
 
                 <?php
+                $id=1;
                 include('page-master/profile_options.php')
                 ?>
             </div>
@@ -170,7 +171,7 @@
                         </video>
                     </div>
                     <div class="see_more">
-                        <a href="" class="btn_see">See more <span class="icon-eye"></span></a>
+                        <!-- <a href="" class="btn_see">See more <span class="icon-eye"></span></a> -->
                     </div>
                 </div>
                 <div class="wrap-clases">

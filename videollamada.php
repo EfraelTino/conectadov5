@@ -11,6 +11,7 @@
                     <a href="explore" class="options">Explore</a> -->
                 </div>
                 <?php
+                $id= 3;
                 include('page-master/profile_options.php')
                 ?>
             </div>

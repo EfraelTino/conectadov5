@@ -22,6 +22,7 @@
                     <button onclick="viewDetalis('avatar');" id="avatar_item" class="options avatar_item">Avatar</button>
                 </div>
                 <?php
+                $id= 1;
                 include('page-master/profile_options.php')
                 ?>
             </div>
@@ -72,7 +73,7 @@
                                         echo $url  ?>" class="name_universtity"><?php echo $row['name'] ?></a>
                             <div class="desc">
                                 <p class="countri_uni"><?php echo $row['location'] ?></p>
-                                <button onclick="openModal('edit', <?php echo $row['id']; ?>);" class="btn_edit" data-id="<?php echo $row['id']; ?>">Edit <span class="icon-edit"></span></button>
+                                <button style="opacity: 0;" disabled onclick="openModal('edit', <?php echo $row['id']; ?>);" class="btn_edit" data-id="<?php echo $row['id']; ?>">Edit <span class="icon-edit"></span></button>
                             </div>
                         </div>
                     <?php } ?>

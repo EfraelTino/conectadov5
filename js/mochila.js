@@ -1093,39 +1093,8 @@ function editAddress() {
     });
 }
 
-
-function openProfile(id) {
-    const closeOption = $("#closeOption");
-    const mochila_container = $("#mochila_container");
-    const backpack_container = $("#backpack_container");
-    const universiti_container = $("#universiti_container");
-    const videloLlamada_container = $("#container-videllamada");
-    // Oculta todos los contenedores primero
-    mochila_container.removeClass('ver_mochila');
-    backpack_container.removeClass("ver_backpack");
-    universiti_container.removeClass("ver_uni");
-    videloLlamada_container.removeClass("ver_llamada");
-
-    switch (id) {
-        case 1:
-            console.log("se ejecuta open profile")
-            mochila_container.addClass('ver_mochila');
-            backpack_container.addClass("ver_backpack");
-            break;
-        case 2:
-            console.log("hola");
-            mochila_container.addClass('ver_mochila');
-            universiti_container.addClass("ver_uni");
-            break;
-        case 3:
-            console.log("se ejecuta 3");
-            mochila_container.addClass('ver_mochila');
-            videloLlamada_container.addClass("ver_llamda");
-            break;
-    }
-    window.Vagon.focusIframe();
-}
 function closeOption(id){
+    console.log(id);
     const mochila_container = $("#mochila_container");
     const backpack_container = $("#backpack_container");
     const universiti_container = $("#universiti_container");
@@ -1149,6 +1118,42 @@ function closeOption(id){
     }
 }
 
+function openProfile(id) {
+    const mochila_container = $("#mochila_container");
+    const backpack_container = $("#backpack_container");
+    const universiti_container = $("#universiti_container");
+    const videloLlamada_container = $("#container-videllamada");
+    const content_chat = $("#content");
+    // Oculta todos los contenedores primero
+    mochila_container.removeClass('ver_mochila');
+    backpack_container.removeClass("ver_backpack");
+    universiti_container.removeClass("ver_uni");
+    videloLlamada_container.removeClass("ver_llamada");
+
+    switch (id) {
+        case 1:
+            console.log("se ejecuta open profile")
+            mochila_container.addClass('ver_mochila');
+            backpack_container.addClass("ver_backpack");
+            videloLlamada_container.removeClass('ver_llamda');
+            content_chat.removeClass("view_chat");
+            break;
+        case 2:
+            console.log("hola");
+            mochila_container.addClass('ver_mochila');
+            universiti_container.addClass("ver_uni");
+            break;
+        case 3:
+            console.log("se ejecuta 3");
+            mochila_container.addClass('ver_mochila');
+            videloLlamada_container.addClass("ver_llamda");
+            mochila_container.removeClass('ver_backpack');
+            content_chat.removeClass("view_chat");
+            break;
+    }
+    window.Vagon.focusIframe();
+}
+
 function alerta() {
     alert("Coming soon");
 }
@@ -1165,6 +1170,7 @@ function viewDetalis(item) {
         case 'account':
             universiti_container.removeClass('view_uni');
             backpack_container.addClass("view_mochila");
+            avatar_container.removeClass('view_avatar');
             account_items.forEach(function (item) {
                 item.classList.add('option-active');
             });

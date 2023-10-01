@@ -12,6 +12,7 @@
                     <button onclick="viewDetalis('avatar');" id="avatar_item" class="options avatar_item">Avatar</button>
                 </div>
                 <?php
+                $id= 1;
                 include('page-master/profile_options.php')
                 ?>
             </div>
