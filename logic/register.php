@@ -35,7 +35,7 @@ if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password)) {
                     if (in_array($img_type, $types) === true) {
                         $time = time();
                         $new_img_name = $time . $img_name;
-                        if (move_uploaded_file($tmp_name, "../userpics/" . $new_img_name)) {
+                        if (move_uploaded_file($tmp_name, "https://puntoarcade.com/videol/userpics/" . $new_img_name)) {
                             $encrypt_pass = md5($password);
                             $insert_query = mysqli_query($conn, "INSERT INTO chat_users (fname, lastname, username, password, img_profile, avatar)
                             VALUES ('{$fname}', '{$lname}', '{$email}', '{$encrypt_pass}', '{$new_img_name}', '{$nuevo_file}')");

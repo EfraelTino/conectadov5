@@ -104,7 +104,7 @@ include('page-master/js.php');
 							echo 
                                 '<div class="profile-container">
 							        <div class="picture-profile">
-							            <img id="profile-img" src="' . 'userpics/' . $user['img_profile'] . '" class="online" alt="user-profile" />';
+							            <img id="profile-img" src="' . 'https://puntoarcade.com/videol/userpics/' . $user['img_profile'] . '" class="online" alt="user-profile" />';
 							echo  
                                         '<p>' . $user['fname'] . ' ' . $user['lastname'] . '</p> 
                                     </div>';
@@ -213,7 +213,7 @@ include('page-master/js.php');
                                                 '<span id="status_' . $user['userid'] . '" class="contact-status ' . $status . '">
                                                 </span>';
 								echo 
-                                                '<img src="userpics/' . $user['img_profile'] . '" alt="profile image" /> ';
+                                                '<img src="https://puntoarcade.com/videol/userpics/' . $user['img_profile'] . '" alt="profile image" /> ';
 								echo 
                                                 '<div class="meta">';
 								echo 
@@ -247,9 +247,7 @@ include('page-master/js.php');
 							$userDetails = $chat->getUserDetails($currentSession);
 							foreach ($userDetails as $user) {
 							echo 
-                                '<div class="img_profile">' .
-                                    '<span class="icon-arrow-left ico-back" onclick="viewChat();">
-                                    </span> ' . '<img src="userpics/conectado.png' . '" alt="user-icon" />';
+                                '<div class="img_profile">'. '<img src="https://puntoarcade.com/videol/userpics/conectado.png' . '" alt="user-icon" />';
 				
 							echo 
                                     '<p>' . 'GLOBAL CHAT' . 

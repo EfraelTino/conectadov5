@@ -4,18 +4,18 @@ class Mochila
 {
 
 	//DATABASE CONNECTION LOCALHOST
-	// private $host  = 'localhost';
-	// private $password   = "";
-	// //private $host  = 'localhost:8080';
-	// private $user  = 'root';
-	// //private $password   = "";
-	// private $database  = "php_chat_1";
+	private $host  = 'localhost';
+	private $password   = "";
+	//private $host  = 'localhost:8080';
+	private $user  = 'root';
+	//private $password   = "";
+	private $database  = "php_chat_1";
 
 	//DATABASE CONNECTION SERVER
-	 private $host  = 'localhost';
-	 private $password   = "Cocorilow.1";
-	 private $user  = 'u960900126_saproducciones';
-	 private $database  = "u960900126_hondabd";
+	//  private $host  = 'localhost';
+	//  private $password   = "Cocorilow.1";
+	//  private $user  = 'u960900126_saproducciones';
+	//  private $database  = "u960900126_hondabd";
 
 
 

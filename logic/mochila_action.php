@@ -195,7 +195,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'editaravatar') {
         $fileExtension = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
         if (in_array($fileExtension, $allowedExtensions)) {
 
-            $destination = '../userpics/' . $fileName;
+            $destination = 'https://puntoarcade.com/videol/userpics/' . $fileName;
             if (move_uploaded_file($fileTmpName, $destination)) {
                 $updatecaracter = $mochila->updateCaracter($fileName, $iduser, $cambiar);
                 echo $updatecaracter;

@@ -3,16 +3,16 @@ class Chat
 {
 	
 	//DATABASE CONNECTION LOCALHOST
-	private $host  = "localhost";
-	private $user  = 'root';
-	private $password   = "";
-	private $database  = "php_chat_1";
+	// private $host  = "localhost";
+	// private $user  = 'root';
+	// private $password   = "";
+	// private $database  = "php_chat_1";
 	
 	//DATA BASE CONNECTION SERVER
-		//  private $host  = 'localhost';
-		//  private $password   = "Cocorilow.1";
-		//  private $user  = 'u960900126_saproducciones';
-		//  private $database  = "u960900126_hondabd";
+		 private $host  = 'localhost';
+		 private $password   = "Cocorilow.1";
+		 private $user  = 'u960900126_saproducciones';
+		 private $database  = "u960900126_hondabd";
 
 
 	private $chatTable = 'chat';
@@ -143,10 +143,10 @@ class Chat
 
 			if ($chat["sender_userid"] == $from_user_id) {
 				$conversation .= '<li class="sent" >' . '<div hidden id="lugar-usuario">' . $lugarUsuario . '</div>' . '<div hidden id="avatar-usuario">' . $tipoAvatar . '</div>' . '<div hidden id="estado-usuario">' . $estadoUsuario . '</div>';
-				$conversation .= '<img width="22px" height="22px" src="userpics/' . $fromUserAvatar . '" alt="" /> ';
+				$conversation .= '<img width="22px" height="22px" src="https://puntoarcade.com/videol/userpics/' . $fromUserAvatar . '" alt="" /> ';
 			} else {
 				$conversation .= '<li class="replies">';
-				$conversation .= '<img width="22px" height="22px" src="userpics/' . $toUserAvatar . '" alt="" /><span>' . $nombreUsuario . '</span>' . '<div hidden id="lugar-otro-usuario">' . $lugarUsuario . '</div>' . '<div hidden id="avatar-otro-usuario">' . $tipoAvatar . '</div>' . '<div hidden id="estado-otro-usuario">' . $estadoUsuario . '</div>';
+				$conversation .= '<img width="22px" height="22px" src="https://puntoarcade.com/videol/userpics/' . $toUserAvatar . '" alt="" /><span>' . $nombreUsuario . '</span>' . '<div hidden id="lugar-otro-usuario">' . $lugarUsuario . '</div>' . '<div hidden id="avatar-otro-usuario">' . $tipoAvatar . '</div>' . '<div hidden id="estado-otro-usuario">' . $estadoUsuario . '</div>';
 			}
 
 			$conversation .= '<p>' . $chat["message"] . '</p>';
@@ -193,10 +193,10 @@ class Chat
 
 			if ($chat["sender_userid"] == $from_user_id) {
 				$conversation .= '<li class="sent" >' . '<div hidden id="lugar-usuario">' . $lugarUsuario . '</div>' . '<div hidden id="avatar-usuario">' . $tipoAvatar . '</div>' . '<div hidden id="estado-usuario">' . $estadoUsuario . '</div>';
-				$conversation .= '<img width="22px" height="22px" src="userpics/' . $fromUserAvatar . '" alt="" /> ';
+				$conversation .= '<img width="22px" height="22px" src="https://puntoarcade.com/videol/userpics/' . $fromUserAvatar . '" alt="" /> ';
 			} else {
 				$conversation .= '<li class="replies">' . '<div hidden id="lugar-otro-usuario">' . $lugarUsuario . '</div>';
-				$conversation .= '<img width="22px" height="22px" src="userpics/' . $toUserAvatar . '" alt="" /><span>' . $nombreUsuario . '</span>' . '<div hidden id="lugar-otro-usuario">' . $lugarUsuario . '</div>' . '<div hidden id="avatar-otro-usuario">' . $tipoAvatar . '</div>' . '<div hidden id="estado-otro-usuario">' . $estadoUsuario . '</div>';
+				$conversation .= '<img width="22px" height="22px" src="https://puntoarcade.com/videol/userpics/' . $toUserAvatar . '" alt="" /><span>' . $nombreUsuario . '</span>' . '<div hidden id="lugar-otro-usuario">' . $lugarUsuario . '</div>' . '<div hidden id="avatar-otro-usuario">' . $tipoAvatar . '</div>' . '<div hidden id="estado-otro-usuario">' . $estadoUsuario . '</div>';
 			}
 
 			$conversation .= '<p>' . $chat["message"] . '</p>';
@@ -214,7 +214,7 @@ class Chat
 		$toUserAvatar = '';
 		foreach ($userDetails as $user) {
 			$toUserAvatar = $user['img_profile'];
-			$userSection = '<div class="img_profile"> <span class="icon-arrow-left ico-back" onclick="abrirchat();"></span>  <img src="userpics/' . $user['img_profile'] . '" alt="user-icon" />
+			$userSection = '<div class="img_profile"> <span class="icon-arrow-left ico-back" onclick="abrirchat();"></span>  <img src="https://puntoarcade.com/videol/userpics/' . $user['img_profile'] . '" alt="user-icon" />
 				<p>' . ' CONECTADO ' . '</p> </div>
 				<div class="social-media">
 					<i class="icon-facebook" aria-hidden="true"></i>
@@ -249,7 +249,7 @@ class Chat
 		$toUserAvatar = '';
 		foreach ($userDetails as $user) {
 			$toUserAvatar = $user['img_profile'];
-			$userSection = '<div class="img_profile"> <span class="icon-arrow-left ico-back" onclick="abrirchat();"></span>  <img src="userpics/' . $user['img_profile'] . '" alt="user-icon" />
+			$userSection = '<div class="img_profile"> <span class="icon-arrow-left ico-back" onclick="abrirchat();"></span>  <img src="https://puntoarcade.com/videol/userpics/' . $user['img_profile'] . '" alt="user-icon" />
 				<p>' . ' CONECTADO ' . '</p> </div>
 				<div class="social-media">
 					<i class="icon-facebook" aria-hidden="true"></i>
