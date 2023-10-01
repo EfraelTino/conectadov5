@@ -139,5 +139,18 @@ class Chat
 		$lastInsertId = mysqli_insert_id($this->dbConnect);
 		return $lastInsertId;
 	}
+	public function insetarVideo($titulo, $archivo,$tipoArchivo){
+		$sql ="INSERT INTO clases (titulo, archivo, tipo_archivo) VALUES ('".$titulo."', '".$archivo."', '".$tipoArchivo."')";
+        mysqli_query($this->dbConnect, $sql);
+		$luegode=mysqli_insert_id($this->dbConnect);
+		return $luegode;
+	}
+	public function deleteVideo($id){
+		$sql ="DELETE FROM clases WHERE id= $id";
+        if (mysqli_query($this->dbConnect, $sql)) {
+			return true; // Éxito al eliminar el registro
+		} else {
+			return false; // Error al eliminar el registro
+		}
+	}
 }
-	

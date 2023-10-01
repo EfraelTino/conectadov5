@@ -94,4 +94,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     echo json_encode($response);
 }
+
+if(isset($_GET['action']) && $_GET['action'] =='eliminarvideo'){
+    $id=$_GET['id'];
+    $ejecutar= $chat->deleteVideo($id);
+    if($ejecutar){
+        header("location: classes");
+    }else{
+        echo "error";
+    }
+}
 ?>

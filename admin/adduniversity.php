@@ -24,7 +24,7 @@ $addError = '';
             if (move_uploaded_file($temp_name, $destination_path)) {
                 header("location: universities");
             } else {
-                $addError = "Error al mover la foto a la carpeta de destino.";
+                $addError = "Error moving photo to destination folder.";
             }
         }
 
@@ -34,10 +34,7 @@ $addError = '';
         $lastInsertId = $chat->insertarUniversidad($nombre_uni, $original_name, $location);
 
         // Continúa con el código según tus necesidades
-    } else {
-        $addError = "Debes proporcionar nombre de universidad y ubicación.";
     }
-
 
 
 ?>
