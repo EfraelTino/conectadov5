@@ -335,10 +335,6 @@ echo "</div>";
 ?>
 
 <script src='./js/mochila.js'></script>
-<script>
-    alert('Se ha agregado el script');
-</script>
-
 
 <?php
 include "page-master/footer.php";

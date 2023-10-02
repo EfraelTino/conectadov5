@@ -1093,7 +1093,7 @@ function editAddress() {
     });
 }
 
-function closeOption(id){
+function closeOption(id) {
     console.log(id);
     const mochila_container = $("#mochila_container");
     const backpack_container = $("#backpack_container");
@@ -1137,11 +1137,15 @@ function openProfile(id) {
             backpack_container.addClass("ver_backpack");
             videloLlamada_container.removeClass('ver_llamda');
             content_chat.removeClass("view_chat");
+            window.Vagon.focusIframe();
+
             break;
         case 2:
             console.log("hola");
             mochila_container.addClass('ver_mochila');
             universiti_container.addClass("ver_uni");
+            window.Vagon.focusIframe();
+
             break;
         case 3:
             console.log("se ejecuta 3");
@@ -1149,6 +1153,8 @@ function openProfile(id) {
             videloLlamada_container.addClass("ver_llamda");
             mochila_container.removeClass('ver_backpack');
             content_chat.removeClass("view_chat");
+            window.Vagon.focusIframe();
+
             break;
     }
     window.Vagon.focusIframe();
@@ -1294,7 +1300,7 @@ function actualizarCabello(id, parte) {
                 responseValue.removeClass('error');
                 responseValue.text('It has been updated correctly.');
                 responseValue.addClass('succes');
-                
+
                 // ACTUALIZAR LA FOTO
                 switch (parte) {
                     case 'cabello':
@@ -1309,38 +1315,38 @@ function actualizarCabello(id, parte) {
                         }
                         break;
                     case 'camiseta':
-                    console.log("entra acá");
-                    if ($("#camisa")[0].files.length > 0) {
-                        const file = $("#camisa")[0].files[0];
-                        const reader = new FileReader();
-                        reader.onload = function (e) {
-                            $('#camisetaImage').attr('src', e.target.result);
-                        };
-                        reader.readAsDataURL(file);
-                    }
-                    break;
+                        console.log("entra acá");
+                        if ($("#camisa")[0].files.length > 0) {
+                            const file = $("#camisa")[0].files[0];
+                            const reader = new FileReader();
+                            reader.onload = function (e) {
+                                $('#camisetaImage').attr('src', e.target.result);
+                            };
+                            reader.readAsDataURL(file);
+                        }
+                        break;
                     case 'pantalon':
-                    console.log("entra acá");
-                    if ($("#pantalon")[0].files.length > 0) {
-                        const file = $("#pantalon")[0].files[0];
-                        const reader = new FileReader();
-                        reader.onload = function (e) {
-                            $('#pantalonImage').attr('src', e.target.result);
-                        };
-                        reader.readAsDataURL(file);
-                    }
-                    break;
+                        console.log("entra acá");
+                        if ($("#pantalon")[0].files.length > 0) {
+                            const file = $("#pantalon")[0].files[0];
+                            const reader = new FileReader();
+                            reader.onload = function (e) {
+                                $('#pantalonImage').attr('src', e.target.result);
+                            };
+                            reader.readAsDataURL(file);
+                        }
+                        break;
                     case 'zapatos':
-                    console.log("entra acá");
-                    if ($("#zapato")[0].files.length > 0) {
-                        const file = $("#zapato")[0].files[0];
-                        const reader = new FileReader();
-                        reader.onload = function (e) {
-                            $('#zapatosImage').attr('src', e.target.result);
-                        };
-                        reader.readAsDataURL(file);
-                    }
-                    break;
+                        console.log("entra acá");
+                        if ($("#zapato")[0].files.length > 0) {
+                            const file = $("#zapato")[0].files[0];
+                            const reader = new FileReader();
+                            reader.onload = function (e) {
+                                $('#zapatosImage').attr('src', e.target.result);
+                            };
+                            reader.readAsDataURL(file);
+                        }
+                        break;
                 }
             }
         },
