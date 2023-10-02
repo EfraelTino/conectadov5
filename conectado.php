@@ -319,8 +319,8 @@ include('page-master/js.php');
         </div>
     </div>
     <div class="conectado_container">
-        <!-- <iframe id="vagonFrame" allow="microphone  *; clipboard-read *; clipboard-write *; encrypted-media *;" src="
-https://streams.vagon.io/streams/52db3244-82f1-4e4a-879d-93141efb4ec2"></iframe>  -->
+        <iframe id="vagonFrame" allow="microphone  *; clipboard-read *; clipboard-write *; encrypted-media *;" src="
+https://streams.vagon.io/streams/8e5ceeed-94a3-4c18-88f1-a8abc6688eb7"></iframe> 
     </div>
 
     <?php
