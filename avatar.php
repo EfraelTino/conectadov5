@@ -27,7 +27,7 @@
                 <div class="wrap_avatar_content">
                     <div class="wrap_second">
                         <div>
-                            <img src="https://puntoarcade.com/videol/userpics/avatar_principal.webp" alt="user avatar" id="imagen_principal" class="avatar_principal">
+                            <img src="userpics/avatar_principal.webp" alt="user avatar" id="imagen_principal" class="avatar_principal">
                             <div class="images_cont_avatar">
                                 <img style="width: 200px;" src="" alt="" class="genero" id="parte_genero" data-parte="genero">
                                 <img style="width: 200px;"  src="" alt="" class="cabello" id="parte_cabello" data-parte="cabello">
@@ -51,7 +51,7 @@
                                 while ($row = $result->fetch_assoc()) {
                                     $indumentaria = $row['indumentaria'];
                                     $parte = $row['parte'];
-                                    echo "<img src='https://puntoarcade.com/videol/userpics/$indumentaria' alt='avatar pants' class='image_avatar_part' data-src='https://puntoarcade.com/videol/userpics/$indumentaria' data-parte='$parte'>";
+                                    echo "<img src='userpics/$indumentaria' alt='avatar pants' class='image_avatar_part' data-src='userpics/$indumentaria' data-parte='$parte'>";
                                 }
                             } else {
                                 echo "No se encontraron registros en la tabla.";

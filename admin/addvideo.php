@@ -31,9 +31,7 @@ if (!empty($_POST['titulo'])) {
     include('Chat.php');
     $chat = new Chat();
     $lastInsertId = $chat->insetarVideo($titulo, $nombreArchivo, $extension);
-} else {
-    $addError = 'error';
-}
+}   
 ?>
 
 

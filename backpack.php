@@ -30,6 +30,7 @@
 
         </div>
     </div>
+    <div class="ft_bk">
     <div class="back_child">
         <div class="wrap-general">
             <div class="wrap-profile">
@@ -38,7 +39,7 @@
                 <div class="wrap-email">
                     <div class="cont-email">
                         <p class="prev_text email_t">Email</p>
-                        <button onclick="openModalP('updatemail', <?php echo $data[0]['userid'] ?>);" class="text_edit_email">Update. <span class="icon-edit ic_eds"></span></button>
+                        <button onclick="openModalP('updatemail', <?php echo $data[0]['userid'] ?>);" class="text_edit_email">Update<span class="icon-edit ic_eds"></span></button>
                     </div>
                     <div class="emial_des">
                         <small><strong>Your email</strong></small>
@@ -195,6 +196,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <?php
     // include('modals.php');

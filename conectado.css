@@ -750,7 +750,9 @@ h2 {
     color: #4a4a4a;
     font-weight: 300;
 }
-
+.title_class{
+    text-align: center;
+}
 .email_text::placeholder {
     color: #FFFFFF !important;
     width: 100% !important;
@@ -858,7 +860,10 @@ h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: var(--color-secundario);
+    background-image: url(textures/fondo_login.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
     border-radius: 30px;
     padding: 30px;
     position: absolute;
@@ -888,7 +893,7 @@ h2 {
 }
 
 .input_suggestion {
-    height: 100px;
+    height: 200px;
     /* Puedes ajustar el valor aquí según el tamaño deseado */
     border-radius: 10px;
     margin: 0px 0px 14px 0px;
@@ -926,10 +931,15 @@ h2 {
 
 .send_suggestion {
     padding: 10px 0px;
-    background-color: var(--color-primario);
+    background: rgb(77, 183, 197);
+    background: -moz-linear-gradient(0deg, rgba(77, 183, 197, 1) 19%, rgba(35, 185, 154, 1) 63%);
+    background: -webkit-linear-gradient(0deg, rgba(77, 183, 197, 1) 19%, rgba(35, 185, 154, 1) 63%);
+    background: linear-gradient(0deg, rgba(77, 183, 197, 1) 19%, rgba(35, 185, 154, 1) 63%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4db7c5", endColorstr="#23b99a", GradientType=1);
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 50px;
+    border: 1px solid white !important;
     cursor: pointer;
     font-weight: 600;
     font-size: 16px;
@@ -938,12 +948,16 @@ h2 {
 .suggestion_text {
     margin: 0;
     padding-top: 0;
-    color: var(--color-primario);
+    color: #51b6ca;
     font-weight: 400;
     font-size: 18px;
     text-align: center;
+    margin: 10px 0px;
 }
+.suggestion_text strong{
+    color: #51b6ca;
 
+}
 .group {
     font-weight: 700;
 }
@@ -1757,7 +1771,9 @@ body {
     color: var(--color-white);
     cursor: pointer;
 }
+#lugar-otro-usuario{
 
+}
 .social-media .icon-facebook,
 .social-media .icon-twitter,
 .social-media .icon-instagram {
@@ -1773,7 +1789,7 @@ body {
 }
 
 .messages {
-    min-height: 240px;
+    min-height: 300px;
     position: relative;
     max-height: 240px;
     overflow-y: auto;
@@ -1856,6 +1872,7 @@ body {
     position: relative;
     order: 0;
     max-width: 240px;
+    font-weight: 300;
 }
 
 .message-input {

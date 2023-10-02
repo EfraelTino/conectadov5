@@ -65,18 +65,18 @@ ul {
     display: block;
 }
 
-.cont_backpack::-webkit-scrollbar {
+.back_child::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 }
 
-.cont_backpack::-webkit-scrollbar-thumb {
-    background-color: var(--color-primario);
+.back_child::-webkit-scrollbar-thumb {
+    background-color: white;
     border-radius: 5px;
 }
 
-.cont_backpack::-webkit-scrollbar-track {
-    background-color: var(--color-secundario);
+.back_child::-webkit-scrollbar-track {
+    background-color: white;
     border-radius: 0px 40px 0px 0px;
     height: 10px;
 }
@@ -101,7 +101,7 @@ ul {
 
 
 .header_principal {
-    background-color: var(--color-secundario);
+    background-color:  #C4C5C8;;
     box-shadow: 0rem 0rem 0.5rem rgba(255, 255, 255, 0.04), 0rem 0.125rem 1.125rem rgba(227, 227, 227, 0.1);
     padding: 0.5rem 0rem;
     position: fixed;
@@ -234,7 +234,7 @@ h4,
     font-size: 18px;
     font-weight: 500;
     transition: var(--transition300);
-    border: 2px solid var(--color-secundario);
+    border: none;
     border-radius: 20px;
     padding: 10px 16px;
     cursor: pointer;
@@ -246,11 +246,9 @@ h4,
 .view_avatar{
     display: block;
     background-color: var(--color-primario);
+    border-radius: 20px 30px 0px 0px;
 }
 
-.options:hover {
-    border: 2px solid #0B063B50;
-}
 
 .option-active {
     background: var(--color-white);
@@ -305,7 +303,7 @@ h4,
 }
 
 .img_profile {
-    width: 90px;
+    width: 120;
     border-radius: 50%;
     height: auto;
 }
@@ -358,7 +356,7 @@ h4,
 .ic_eds,
 .text_add {
     color: var(--color-light2);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
 }
 
@@ -405,6 +403,7 @@ h4,
 .email_t {
     color: black;
     font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .list_uni {
@@ -434,7 +433,7 @@ h4,
 
 .text_names {
     color: var(--color-black);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.3rem;
     height: 24px;
     overflow: hidden;
@@ -455,9 +454,11 @@ h4,
 .emial_des {
     padding: 1rem 2rem 2rem 2rem;
 }
-
+.emial_des small strong{
+    font-weight: 400;
+}
 .text_rename {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 14px;
     color: var(--color-light2);
     background: none;
@@ -987,7 +988,11 @@ display: none;
     border: none;
 }
 .next_video{
-    background-color: var(--color-ausente);border: none;
+    background: rgb(77, 183, 197);
+    background: -moz-linear-gradient(0deg, rgba(77, 183, 197, 1) 19%, rgba(35, 185, 154, 1) 63%);
+    background: -webkit-linear-gradient(0deg, rgba(77, 183, 197, 1) 19%, rgba(35, 185, 154, 1) 63%);
+    background: linear-gradient(0deg, rgba(77, 183, 197, 1) 19%, rgba(35, 185, 154, 1) 63%);
+    border: none;
 }
 
 #controls, #connection{

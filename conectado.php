@@ -59,8 +59,8 @@ include('page-master/js.php');
         <button class="btn_camera" onclick="openProfile(3);">
             <img src="images/callwebp.webp" alt="greeting icon" class="icon-greting">
         </button>
-        <button class="btn_logout" onclick="logOut();">
-            <span class="icon-log-out"></span>
+        <button class="btn_camera" onclick="logOut();">
+        <img src="images/logou_icon.webp" alt="logout icon" class="icon-greting">
         </button>
     </div>
     <!-- SECCION DEL CHAT -->
@@ -104,7 +104,7 @@ include('page-master/js.php');
 							echo 
                                 '<div class="profile-container">
 							        <div class="picture-profile">
-							            <img id="profile-img" src="' . 'https://puntoarcade.com/videol/userpics/' . $user['img_profile'] . '" class="online" alt="user-profile" />';
+							            <img id="profile-img" src="' . 'userpics/' . $user['img_profile'] . '" class="online" alt="user-profile" />';
 							echo  
                                         '<p>' . $user['fname'] . ' ' . $user['lastname'] . '</p> 
                                     </div>';
@@ -213,7 +213,7 @@ include('page-master/js.php');
                                                 '<span id="status_' . $user['userid'] . '" class="contact-status ' . $status . '">
                                                 </span>';
 								echo 
-                                                '<img src="https://puntoarcade.com/videol/userpics/' . $user['img_profile'] . '" alt="profile image" /> ';
+                                                '<img src="userpics/' . $user['img_profile'] . '" alt="profile image" /> ';
 								echo 
                                                 '<div class="meta">';
 								echo 
@@ -247,10 +247,11 @@ include('page-master/js.php');
 							$userDetails = $chat->getUserDetails($currentSession);
 							foreach ($userDetails as $user) {
 							echo 
-                                '<div class="img_profile">'. '<img src="https://puntoarcade.com/videol/userpics/conectado.png' . '" alt="user-icon" />';
+                                '<div class="img_profile">' .
+ '<img src="userpics/conectado.png' . '" alt="user-icon" />';
 				
 							echo 
-                                    '<p>' . 'GLOBAL CHAT' . 
+                                    '<p class="title_class">' . 'GLOBAL CHAT' . 
                                     '</p>' . 
                                 '</div>';
 							echo 
@@ -290,7 +291,6 @@ include('page-master/js.php');
     <div class="suggestion-container">
         <div class="conte-suggestion" id="suggestion_container">
             <button class="btn_x" onclick="showSuggestion();"> <span class="icon-x"></span></button>
-            <img src="images/logo_conectado.webp" alt="logo conectado" class="logo_conectado">
             <h3 class="suggestion_text">SUGGESTION <strong>BOX</strong></h3>
             <?php
 
@@ -329,7 +329,7 @@ https://streams.vagon.io/streams/52db3244-82f1-4e4a-879d-93141efb4ec2"></iframe>
     include('universities.php');
     include ('videollamada.php');
     include ('avatar.php');
-    // include("modal.php");
+    include("modal.php");
     include('modals.php');
     echo "</div>";
 
