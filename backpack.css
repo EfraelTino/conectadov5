@@ -940,6 +940,7 @@ h4,
     width: 100%;
 }
 .container_videollamada{
+    background-color: #5F6062;
     display:none; 
     width: 480px;
     height: 490px;
