@@ -335,7 +335,7 @@ https://streams.vagon.io/streams/8e5ceeed-94a3-4c18-88f1-a8abc6688eb7"></iframe>
 
     echo "
 <script src='./js/mochila.js'> </script>
-<script src='https://tokbox.com/embed/embed/ot-embed.js?embedId=6eed51e8-8b66-4676-822b-a6f4edaefaa8&room=DEFAULT_ROOM'></script>
+
 ";
     include "page-master/footer.php";
     ?>

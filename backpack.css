@@ -319,7 +319,9 @@ h4,
 .wrp_security {
     width: 100%;
 }
-
+.wrap-profile .cont-profile .swpa-profile .cont-photo .cont_data .cont_profession .pr img{
+    width: 120px;
+}
 .cont-photo {
     background-color: var(--color-primario);
     box-sizing: border-box;

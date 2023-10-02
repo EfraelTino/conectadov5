@@ -18,7 +18,7 @@
                     <img src="images/smal_conectado.webp" alt="Logo CONECTADO" width="120">
                     <button onclick="viewDetalis('account');" id="accout_item" class="options  accout_item option-active">Account</button>
                     <button onclick="viewDetalis('list_uni');" id="university_item" class="options accout_item ">Campus connect</button>
-                    <button onclick="viewDetalis('avatar');" id="avatar_item" class="options avatar_item">Avatar</button>
+                    <!-- <button onclick="viewDetalis('avatar');" id="avatar_item" class="options avatar_item">Avatar</button> -->
 
                 </div>
 
