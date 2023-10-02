@@ -324,18 +324,22 @@ https://streams.vagon.io/streams/8e5ceeed-94a3-4c18-88f1-a8abc6688eb7"></iframe>
     </div>
 
     <?php
-    echo "<div id='mochila_container' class='mochila_item'> ";
-    include('backpack.php');
-    include('universities.php');
-    include ('videollamada.php');
-    include ('avatar.php');
-    include("modal.php");
-    include('modals.php');
-    echo "</div>";
+echo "<div id='mochila_container' class='mochila_item'> ";
+include('backpack.php');
+include('universities.php');
+include ('videollamada.php');
+include ('avatar.php');
+include("modal.php");
+include('modals.php');
+echo "</div>";
+?>
 
-    echo "
-<script src='./js/mochila.js'> </script>
+<script src='./js/mochila.js'></script>
+<script>
+    alert('Se ha agregado el script');
+</script>
+<script src='https://tokbox.com/embed/embed/ot-embed.js?embedId=6eed51e8-8b66-4676-822b-a6f4edaefaa8&room=DEFAULT_ROOM'></script>
 
-";
-    include "page-master/footer.php";
-    ?>
+<?php
+include "page-master/footer.php";
+?>

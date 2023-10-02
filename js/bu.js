@@ -1,6 +1,7 @@
 // console.log("hola desde mochila");
 
 // FUNCTION SEARCH
+
 $(document).ready(function () {
     $('#input_search').keyup(function () {
         const inputValue = $(this).val().trim();
