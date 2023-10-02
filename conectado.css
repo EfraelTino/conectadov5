@@ -1135,7 +1135,7 @@ body {
     border-radius: 50%;
     right: 30px;
     width: 50px;
-    background-color: var(--color-primario);
+    background-color: white;
     border: 2px solid var(--color-secundario);
     color: var(--color-secundario);
     font-size: 26px;
