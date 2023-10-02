@@ -802,6 +802,7 @@ h2 {
     background: none;
     border: none;
     cursor: pointer;
+    position: relative;
 }
 
 .emoji-button:focus-visible {
@@ -813,7 +814,31 @@ h2 {
 .icon-suggestion {
     width: 100px;
 }
-
+.text_suggestion, .text_backpack, .text_videocall ,.text_logout, .text_chat{
+    display: none;
+    position: absolute;
+    top: -20px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 300;
+}
+.button_suggestion:hover .text_suggestion{
+    display: block;
+}
+.maleta_button:hover .text_backpack{
+    display: block;
+}
+.btn_call_llamada:hover .text_videocall{
+    display: block;
+}
+.btn_lg:hover .text_logout{
+    display: block;
+}
+.chat_flotante:hover .text_chat{
+    display: block;
+}
 .suggestion-container {
     position: absolute;
     justify-content: center;
@@ -975,6 +1000,7 @@ h2 {
     margin: 0px 5px;
     cursor: pointer;
     border: none;
+    position: relative;
 }
 .btn_logout{
     background-color: #031538;
