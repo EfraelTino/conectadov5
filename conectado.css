@@ -656,7 +656,7 @@ h2 {
 }
 
 /* estilizar el scroll */
-.container_mess {
+.container_mess {.flotante
     width: 100%;
     margin-bottom: 8px;
 }
@@ -1135,7 +1135,7 @@ body {
     border-radius: 50%;
     right: 30px;
     width: 50px;
-    background-color: var(--color-primario);
+    background-color: white;
     border: 2px solid var(--color-secundario);
     color: var(--color-secundario);
     font-size: 26px;
