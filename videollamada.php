@@ -1,5 +1,5 @@
-<div class="container_videollamada cont_backpack" id="container-videllamada">
-    <div class="header_principal head_llamda">
+<div class="container_videollamada cont_backpack"  id="container-videllamada">
+<div class="header_principal head_llamda">
         <div class="cl_head">
             <div class="close_containers">
 
