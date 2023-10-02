@@ -18,3 +18,6 @@
     </div>
     <div id="otEmbedContainer"></div>
 </div>
+
+
+<script src='https://tokbox.com/embed/embed/ot-embed.js?embedId=6eed51e8-8b66-4676-822b-a6f4edaefaa8&room=DEFAULT_ROOM'></script>   
