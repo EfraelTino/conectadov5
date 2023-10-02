@@ -792,10 +792,10 @@ h2 {
     position: fixed;
     z-index: 88;
     bottom: 16px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
-    right: 40%;
+    width: 100%;
 }
 
 .emoji-button {
@@ -1141,11 +1141,12 @@ body {
     font-size: 26px;
     font-weight: 700;
     height: 50px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 100;
     cursor: pointer;
+
 }
 
 .flotante span {

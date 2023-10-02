@@ -12,7 +12,13 @@ var lugarGeneral = "";
 
 // FUNCTION SEARCH
 $(document).ready(function () {
+    setTimeout(function () {
+        const containerEmojis = document.getElementById('todos_emojis');
+        containerEmojis.style.display = 'flex'; // Cambia 'none' a 'block' para mostrar los botones
+        const abrir_chat = document.getElementById("abrir_chat");
+        abrir_chat.style.display = 'flex'; // Cambia 'none' a 'block' para mostrar los botones
 
+    }, 30000);
     $('#input_search').keyup(function () {
         const inputValue = $(this).val().trim();
         const responseValue = $('#response_value')

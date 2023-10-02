@@ -39,7 +39,7 @@ include('page-master/js.php');
         </div>
 
     </div>
-    <div class="container-emojis">
+    <div class="container-emojis" id="todos_emojis">
         <button id="Saludo" class="emoji-button" hidden>
             <img src="images/han.webp" alt="greeting icon" class="icon-hand">
         </button>
@@ -65,7 +65,7 @@ include('page-master/js.php');
     </div>
     <!-- SECCION DEL CHAT -->
     <?php if (isset($_SESSION['userid']) && $_SESSION['userid']) { ?>
-			<button class="flotante" onclick="openChat()">
+			<button  id="abrir_chat" class="flotante" onclick="openChat()">
 				<span class="icon-message-square"></span>
 			</button>
 			<div class="chat">
