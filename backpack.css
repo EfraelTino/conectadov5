@@ -101,14 +101,17 @@ ul {
 
 
 .header_principal {
-    background-color:  #C4C5C8;;
+    background-color:  rgb(141, 141, 141);
     box-shadow: 0rem 0rem 0.5rem rgba(255, 255, 255, 0.04), 0rem 0.125rem 1.125rem rgba(227, 227, 227, 0.1);
     padding: 0.5rem 0rem;
     position: fixed;
     border-radius: 20px 20px 0px 0px;
     z-index: 99;
 }
+.head_llamda{
+    background-color: white;
 
+}
 .cl-normal {
     width: 1200px;
     margin: auto;
@@ -946,6 +949,8 @@ h4,
     height: 490px;
     right: 1rem;
     left: unset;
+
+    border-radius: 50px 30px 50px 20px;
 }
 .container_videollamada #otEmbedContainer{
     width: 100%;
