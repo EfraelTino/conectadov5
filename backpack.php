@@ -39,7 +39,7 @@
                 <div class="wrap-email">
                     <div class="cont-email">
                         <p class="prev_text email_t">Email</p>
-                        <button onclick="openModalP('updatemail', <?php echo $data[0]['userid'] ?>);" class="text_edit_email">Update<span class="icon-edit ic_eds"></span></button>
+                        <!-- <button onclick="openModalP('updatemail', <?php echo $data[0]['userid'] ?>);" class="text_edit_email">Update<span class="icon-edit ic_eds"></span></button> -->
                     </div>
                     <div class="emial_des">
                         <small><strong>Your email</strong></small>
@@ -49,7 +49,7 @@
                 <div class="wrap-phone">
                     <div class="cont-email">
                         <p class="prev_text email_t">Phone number</p>
-                        <button onclick="openModalP('updateNumber', <?php echo $data[0]['userid'] ?>);" class="text_edit_email">Update <span class="icon-edit ic_eds"></span></button>
+                        <!-- <button onclick="openModalP('updateNumber', <?php echo $data[0]['userid'] ?>);" class="text_edit_email">Update <span class="icon-edit ic_eds"></span></button> -->
                     </div>
                     <div class="emial_des">
                         <small><strong>Mobile phone</strong></small>
@@ -65,7 +65,7 @@
                 <div class="wrap-phone">
                     <div class="cont-email">
                         <p class="prev_text email_t">University</p>
-                        <button onclick="openModalP('updateuni', <?php echo $data[0]['userid'] ?>);" class="text_edit_email">Update <span class="icon-edit ic_eds"></span></button>
+                        <!-- <button onclick="openModalP('updateuni', <?php echo $data[0]['userid'] ?>);" class="text_edit_email">Update <span class="icon-edit ic_eds"></span></button> -->
                     </div>
                     <div class="emial_des">
                         <small><strong>Your university</strong></small>
@@ -81,7 +81,7 @@
                 <div class="wrap-phone">
                     <div class="cont-email">
                         <p class="prev_text email_t">Main data</p>
-                        <button onclick="openModalP('updatedata', <?php echo $data[0]['userid'] ?>);" class="text_edit_email">Update <span class="icon-edit ic_eds"></span></button>
+                        <!-- <button onclick="openModalP('updatedata', <?php echo $data[0]['userid'] ?>);" class="text_edit_email">Update <span class="icon-edit ic_eds"></span></button> -->
                     </div>
                     <div class="emial_des">
                         <small><strong>National identification</strong></small>
@@ -126,7 +126,7 @@
                 <div class="wrap-phone">
                     <div class="cont-email">
                         <p class="prev_text email_t">Address</p>
-                        <button onclick="openModalP('updateadress', <?php echo $data[0]['userid'] ?>);" class="text_edit_email">Update <span class="icon-edit ic_eds"></span></button>
+                        <!-- <button onclick="openModalP('updateadress', <?php echo $data[0]['userid'] ?>);" class="text_edit_email">Update <span class="icon-edit ic_eds"></span></button> -->
                     </div>
                     <div class="emial_des">
                         <small><strong>Address</strong></small>

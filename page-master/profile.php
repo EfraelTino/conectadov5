@@ -28,7 +28,7 @@
                         </div>
                         <div class="cont-name">
                             <p class="text_names"><?php echo $data[0]['fname'] . ' ' . $data[0]['lastname']; ?></p>
-                            <button onclick="openModalP('updatename', <?php echo $data[0]['userid'] ?>);" class="text_rename">Rename <span class="icon-edit"></span></button>
+                            <!-- <button onclick="openModalP('updatename', <?php echo $data[0]['userid'] ?>);" class="text_rename">Rename <span class="icon-edit"></span></button> -->
                         </div>
                     </div>
                 </div>
