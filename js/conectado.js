@@ -16,6 +16,10 @@ function openChat(){
   contenChat.toggleClass("view_chat");
   profile.toggleClass("ocutlar_profile");
   window.Vagon.focusIframe();
+   // inicio=true;
+   if(inicio){inicio=false;}else{
+    inicio=true;
+  }
 }
 function viewChat(){
   const contenChat = $("#content");

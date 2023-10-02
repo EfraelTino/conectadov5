@@ -18,15 +18,24 @@ var chatContainer = document.querySelector(".chat");
 //var btnMapa = document.getElementById("button-mapa");
 var mapaContainer = document.getElementById("mapa");
 //var btnClose = document.querySelector('.btn-close');
+var inicio = false;
+var temporizador=0;
+
+function checkTodo(){
+	updateUserChat();
+	actualizarLugar();
+	scrollToBottom();
+}
 
 $(document).ready(function () {
-
-	// setInterval(function () {
-		// updateUserChat();
-		// showUserChat();
-		// updateUserList();
-		// actualizarLugar();
-	// }, 100);
+	
+   setInterval(function () {
+	temporizador++;
+		if(inicio){
+			checkTodo();
+		}
+		if(temporizador>6){temporizador=0;inicio=false;}
+	 }, 5000);
 	$(".messages").animate({
 		scrollTop: $(document).height()
 	}, "fast");
@@ -96,6 +105,7 @@ $(document).ready(function () {
 // esta función aún no se está usando
 function updateUserList() {
 	// estadoenLista=document.getElementById("personasEnLinea");
+	console.log("actualizar");
 	$.ajax({
 		url: "chat_action.php",
 		method: "POST",
@@ -128,6 +138,7 @@ function updateUserList() {
 
 $(document).ready(function(to_user_id) {
     // Obtén to_user_id de algún lugar y luego llama a las funciones de evento
+	
 
     $("#sendButton").on("click", function() {
         sendMessage(to_user_id);
@@ -139,14 +150,14 @@ $(document).ready(function(to_user_id) {
             sendMessage(to_user_id);
         }
     });
-			scrollToBottom();
+			
 
 });
 
 
 function sendMessage(to_user_id) {
+
 	ubicacionGeneral;
-	scrollToBottom();
 	var message = $(".message-input input").val();
 	$('.message-input input').val('');
 	if ($.trim(message) == '') {
@@ -168,16 +179,15 @@ function sendMessage(to_user_id) {
 			var resp = $.parseJSON(response);
 			$('#conversation').html(resp.conversation);
 			$(".messages").animate({ scrollTop: $('.messages').height() }, "fast");
-			scrollToBottom();
 		}
 	});
+	//alert(message);
 	updateUnreadMessageCount();
 	updateUserChat();
-	scrollToBottom();
 }
 // se está usando para ver el chat grupal
 function showUserChat(to_user_id) {
-	scrollToBottom();
+	//console.log(to_user_id);
 	$.ajax({
 		url: "chat_action.php",
 		method: "POST",
@@ -191,12 +201,14 @@ function showUserChat(to_user_id) {
 			$('#unread_' + to_user_id).addClass('unread');
 		}
 	});
+
 }
 
 
 var entraNuevo = "";
 function updateUserChat() {
-	$('li.contact.active').each(function () {
+	
+	$('li.contact').each(function () {//li.contact.active
 		var to_user_id = $(this).attr('data-touserid');
 		$.ajax({
 			url: "chat_action.php",
@@ -205,15 +217,13 @@ function updateUserChat() {
 			dataType: "json",
 			success: function (response) {
 				$('#conversation').html(response.conversation);
-				if (entraNuevo != $('#conversation')[0].innerText && primero) {
+				if (entraNuevo != $('#conversation')[0].innerText) {//&& primero
 					entraNuevo = $('#conversation')[0].innerText; //-----------------------------------
-					var audio = document.getElementById("audio");
-					audio.play();
-					// console.log(response);
+					//var audio = document.getElementById("audio");
+					//audio.play();
+					//console.log(response+" -*-*-*-*-*-*-*-*-*-*-*-");
+					temporizador=1;
 				}
-				//primero=true;
-				//console.log(primero);
-
 			}
 		});
 	});
@@ -262,8 +272,13 @@ function showTypingStatus() {
 
 // Capturar el evento de desplazamiento del scroll
 function scrollToBottom() {
+
 	var docChat = document.getElementById("conversation");
-	docChat.scrollTop = docChat.scrollHeight;
+	if(docChat!=null){
+		docChat.scrollTop = docChat.scrollHeight;
+		inicio=true;
+		
+	}
 }
 
 
