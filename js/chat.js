@@ -19,23 +19,36 @@ var chatContainer = document.querySelector(".chat");
 var mapaContainer = document.getElementById("mapa");
 //var btnClose = document.querySelector('.btn-close');
 var inicio = false;
-var temporizador=0;
+var temporizador = 0;
 
-function checkTodo(){
-	updateUserChat();
+function checkTodo() {
+	// updateUserChat();
 	actualizarLugar();
 	scrollToBottom();
 }
-
+function cerrarChat() {
+	const chatContainer = $(".chat");
+	chatContainer.removeClass('view_chat');
+	const contenChat = $("#content");
+	const profile = $("#profile");
+	contenChat.removeClass("view_chat");
+	profile.removeClass("ocutlar_profile");
+	window.Vagon.focusIframe();
+}
 $(document).ready(function () {
-	
-   setInterval(function () {
-	temporizador++;
-		if(inicio){
+	setInterval(function () {
+
+		temporizador++;
+		if (inicio) {
+
 			checkTodo();
 		}
-		if(temporizador>6){temporizador=0;inicio=false;}
-	 }, 5000);
+		if (temporizador > 6) {
+			temporizador = 0; inicio = false; console.log("auto off");
+			window.Vagon.focusIframe();
+			cerrarChat();
+		}
+	}, 5000);
 	$(".messages").animate({
 		scrollTop: $(document).height()
 	}, "fast");
@@ -127,7 +140,7 @@ function updateUserList() {
 					}
 				}
 			});
-		},error: function(xhr, status, error ){
+		}, error: function (xhr, status, error) {
 			console.log(xhr.responseText);
 			console.log(xhr);
 			console.log(status);
@@ -136,21 +149,21 @@ function updateUserList() {
 	});
 }
 
-$(document).ready(function(to_user_id) {
-    // Obtén to_user_id de algún lugar y luego llama a las funciones de evento
-	
+$(document).ready(function (to_user_id) {
+	// Obtén to_user_id de algún lugar y luego llama a las funciones de evento
 
-    $("#sendButton").on("click", function() {
-        sendMessage(to_user_id);
-    });
 
-    $(".message-input input").on("keydown", function(event) {
-        if (event.keyCode === 13) {
-            event.preventDefault();
-            sendMessage(to_user_id);
-        }
-    });
-			
+	$("#sendButton").on("click", function () {
+		sendMessage(to_user_id);
+	});
+
+	$(".message-input input").on("keydown", function (event) {
+		if (event.keyCode === 13) {
+			event.preventDefault();
+			sendMessage(to_user_id);
+		}
+	});
+
 
 });
 
@@ -207,7 +220,7 @@ function showUserChat(to_user_id) {
 
 var entraNuevo = "";
 function updateUserChat() {
-	
+
 	$('li.contact').each(function () {//li.contact.active
 		var to_user_id = $(this).attr('data-touserid');
 		$.ajax({
@@ -222,7 +235,7 @@ function updateUserChat() {
 					//var audio = document.getElementById("audio");
 					//audio.play();
 					//console.log(response+" -*-*-*-*-*-*-*-*-*-*-*-");
-					temporizador=1;
+					temporizador = 1;
 				}
 			}
 		});
@@ -274,10 +287,10 @@ function showTypingStatus() {
 function scrollToBottom() {
 
 	var docChat = document.getElementById("conversation");
-	if(docChat!=null){
+	if (docChat != null) {
 		docChat.scrollTop = docChat.scrollHeight;
-		inicio=true;
-		
+		inicio = true;
+
 	}
 }
 
@@ -288,29 +301,29 @@ function scrollToBottom() {
 // actualizar  lugar de ubicacion del usuario
 function actualizarLugar(ubicacion) {
 	if (ubicacion != undefined) {
-	//   console.log(ubicacion);
-	  var formData = new FormData();
-	  formData.append('action', 'actualizar_lugar_usuario');
-	  formData.append('lugar', ubicacion);
-	  $.ajax({
-		url: "chat_action.php",
-		method: "POST",
-		data: formData,
-		dataType: "json",
-		contentType: false,
-		processData: false,
-		success: function(response) {
-		//   console.log(response);
-		//   Obtener el lugar que el response nos manda
-		  var lugarActualizado = response.lugar;
-		//   console.log("Lugar actualizado:", lugarActualizado);
-		  $('#lugar-del-usuario').text(lugarActualizado);
-		},
-		error: function(xhr, status, error) {
-		//   console.log(xhr.responseText);
-		//   console.log(error);
-		}
-	  });
+		//   console.log(ubicacion);
+		var formData = new FormData();
+		formData.append('action', 'actualizar_lugar_usuario');
+		formData.append('lugar', ubicacion);
+		$.ajax({
+			url: "chat_action.php",
+			method: "POST",
+			data: formData,
+			dataType: "json",
+			contentType: false,
+			processData: false,
+			success: function (response) {
+				//   console.log(response);
+				//   Obtener el lugar que el response nos manda
+				var lugarActualizado = response.lugar;
+				//   console.log("Lugar actualizado:", lugarActualizado);
+				$('#lugar-del-usuario').text(lugarActualizado);
+			},
+			error: function (xhr, status, error) {
+				//   console.log(xhr.responseText);
+				//   console.log(error);
+			}
+		});
 	}
-  }
-  
+}
+
