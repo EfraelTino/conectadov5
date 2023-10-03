@@ -803,12 +803,36 @@ h2 {
     border: none;
     cursor: pointer;
     position: relative;
+    transition: var(--transition300);
 }
+.emoji-button:hover{
+    transform: scale(1.1);
 
+}
+.emoji-button:active{
+    transform: scale(0.9);
+}
 .emoji-button:focus-visible {
     outline: none;
 }
-
+.maleta_button:hover{
+    transform: scale(1.1);
+}
+.maleta_button:active{
+    transform: scale(0.9);
+}
+.btn_call_llamada:hover{
+    transform: scale(1.1);
+}
+.btn_call_llamada:active{
+    transform: scale(0.9);
+}
+.btn_lg:hover{
+    transform: scale(1.1);
+}
+.btn_lg:active{
+    transform: scale(0.9);
+}
 .icon-hand,
 .icon-greting,
 .icon-suggestion {
@@ -849,7 +873,12 @@ h2 {
     display: none;
     /* Agregamos display: flex para centrar el contenido */
 }
-
+.flotante:hover{
+    transform: scale(1.1);
+}
+.flotante:active{
+    transform: scale(0.9);
+}
 .show_s {
     display: flex;
 }
@@ -1001,6 +1030,7 @@ h2 {
     cursor: pointer;
     border: none;
     position: relative;
+    transition: var(--transition300);
 }
 .btn_logout{
     background-color: #031538;
@@ -1172,6 +1202,7 @@ body {
     align-items: center;
     z-index: 100;
     cursor: pointer;
+    transition: var(--transition300);
 
 }
 
@@ -1388,10 +1419,12 @@ body {
 }
 
 .btn-login:hover {
-    background-color: #031538;
+    transform: scale(1.1);
     transition: var(--transition300);
 }
-
+.btn-login:active {
+    transform: scale(0.9);
+}
 .opcion {
     display: flex;
     justify-content: center;

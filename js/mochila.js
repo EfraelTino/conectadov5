@@ -19,7 +19,7 @@ $(document).ready(function () {
         abrir_chat.style.display = 'flex'; // Cambia 'none' a 'block' para mostrar los botones
 
     }, 1000);
-    $('#input_search').keyup(function () {
+    $('#input_search').eyup(function () {
         const inputValue = $(this).val().trim();
         const responseValue = $('#response_value')
         if (inputValue === '') {
