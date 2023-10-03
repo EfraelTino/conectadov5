@@ -1973,7 +1973,7 @@ body {
 }
 
 .view_chat {
-    display: block;
+    display: block;z-index: 101;
 }
 
 /* VIEW CHAT */
