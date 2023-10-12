@@ -359,5 +359,12 @@ class Chat
 		// Devolver el estado actualizado
 		return $estadoActualizado;
 	}
+	// public function traerVideo(){
+	// 	$sql = "SELECT * FROM clases WHERE id=1";
+	// 	$result = $this->getData($sql);
+	// 	foreach($result as $row){
+	// 		return $row['archivo'];
+	// 	}
+	// }
 }
 	

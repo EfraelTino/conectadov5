@@ -72,5 +72,7 @@ if ($_POST['action'] == 'actualizar_lugar_usuario') {
     // Enviar la respuesta al front-end
     echo $jsonResponse;
 }
-
+// if($_POST['action'] == 'traer_video'){
+// 	$traer = $chat->traerVideo();
+// }
 ?>

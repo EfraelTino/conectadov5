@@ -22,15 +22,16 @@ include("page-master/head.php");
                     <div class="col-span-12 2xl:col-span-9">
                         <div class="grid grid-cols-12 gap-6">
                             <!-- BEGIN: Notification -->
-                            <div class="col-span-12 mt-6 -mb-6 intro-y">
+                            <div class="col-span-12 mt-6 -mb-6 intro-y" style="width: 100%; text-align: center;">
                                 <!-- <div class="alert alert-dismissible show box bg-primary text-white flex items-center mb-6" role="alert">
                                 <span>Introducing new dashboard! Download now at <a href="https://themeforest.net/item/midone-jquery-tailwindcss-html-admin-template/26366820" class="underline ml-1" target="blank">themeforest.net</a>.</span>
                                 <button type="button" class="btn-close text-white" data-tw-dismiss="alert" aria-label="Close"> <i data-lucide="x" class="w-4 h-4"></i> </button>
                             </div> -->
+                            Welcome to conectado
                             </div>
                             <!-- BEGIN: Notification -->
                             <!-- BEGIN: General Report -->
-                            <div class="col-span-12 lg:col-span-8 xl:col-span-6 mt-2">
+                            <!-- <div class="col-span-12 lg:col-span-8 xl:col-span-6 mt-2">
                                 <div class="intro-y block sm:flex items-center h-10">
                                     <h2 class="text-lg font-medium truncate mr-5">
                                         Informe general
@@ -84,7 +85,7 @@ include("page-master/head.php");
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- END: General Report -->
                             <!-- BEGIN: Visitors -->
                             <!-- <div class="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3 mt-2">
@@ -150,12 +151,11 @@ include("page-master/head.php");
                         </div> -->
                             <!-- END: Visitors -->
                             <!-- BEGIN: Users By Age -->
-                            <div class="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3 mt-2 lg:mt-6 xl:mt-2">
+                            <!-- <div class="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3 mt-2 lg:mt-6 xl:mt-2">
                                 <div class="intro-y flex items-center h-10">
                                     <h2 class="text-lg font-medium truncate mr-5">
                                         Usuarios por roles
                                     </h2>
-                                    <!-- <a href="" class="ml-auto text-primary truncate">Show More</a> -->
                                 </div>
                                 <div class="report-box-2 intro-y mt-5">
                                     <div class="box p-5">
@@ -196,7 +196,7 @@ include("page-master/head.php");
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- END: Users By Age -->
                             <!-- BEGIN: Official Store -->
                             <!-- <div class="col-span-12 lg:col-span-8 mt-6">
