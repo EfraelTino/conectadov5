@@ -202,7 +202,7 @@
                         <embed src="archivos/recurso1.pdf" type="application/pdf" width="100%" height="720">
                         </div>
                         <div class="container-items" style="text-align: center;">
-                            <a href="archivos/recurso1.pdf" id="content_source" style="text-align: center;" download>Open PDF</a>
+                            <a href="archivos/recurso1.pdf" id="content_source" style="text-align: center;" download>Download PDF</a>
                         </div>
                         <div class="see_more">
                             <div class="see_more class_Seemore">

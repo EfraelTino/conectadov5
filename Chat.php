@@ -56,7 +56,7 @@ class Chat
 	public function loginUsers($username, $password)
 	{
 		$sqlQuery = "
-			SELECT userid, username 
+			SELECT userid, username, is_verified 
 			FROM " . $this->chatUsersTable . " 
 			WHERE username='" . $username . "' AND password='" . $password . "'";
 		return  $this->getData($sqlQuery);

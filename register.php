@@ -53,55 +53,71 @@ if (!empty($_POST['username']) && !empty($_POST['pwd'])) {
 
 <body>
 	<div class="container-login">
-	<div class="login-form">
-		
-		<div class="wrapper wrapperregister login-form">
-			<section class="form signup">
+		<div class="login-form">
 
-				<form action="logic/register.php" method="POST" enctype="multipart/form-data" autocomplete="off">
-					<div class="error-text"></div>
-					<div class="name-details">
-						<div class="field input">
-							<label>Name</label>
-							<input type="text" name="fname" class="form-login" placeholder="Your name" required>
-						</div>
-						<div class="field input">
-							<label>Last name</label>
-							<input type="text" name="lname" class="form-login" placeholder="Your last name" required>
-						</div>
-					</div>
-					<div class="field input">
-						<label>Email</label>
-						<input type="text" name="email" class="form-login" placeholder="youremail@example.com" required>
-					</div>
-					<div class="field input">
-						<label>Password</label>
-						<input type="password" name="password" class="form-login" placeholder="Your password" required>
-						<i class="fas fa-eye"></i>
-					</div>
-					<div class="field image">
-						<label>Your photo profile</label>
-						<div class="img_options">
-							<label for="file-upload" class="custom-file-input" id="file-label" style="color: white;">Choose file</label>
-							<input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" id="file-upload" class="hidden-input" onchange="showFileName(event)" required>
-							<span id="file-name">No file selected</span>
-						</div>
-					</div>
-					<div class="field button input grupo_button">
-						<input class="btn-login" type="submit" name="submit" value="SIGN UP" class="input_go">
-					</div>
-				</form>
-				<div class="form-groups opcion">
-					<p class="opcion-registro">Don't have an account? <br><a href="./">SIGN IN</a> </p>
-				</div>
-				<div class="form-groups copy_form">
-					<span class="copy">Copyright © Conectado 2023 </span>
-				</div>
+			<div class="wrapper wrapperregister login-form">
+				<section class="form signup">
 
-			</section>
+					<form action="logic/register.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+						<div class="alert-error" style="color: white; background-color: var(--color-error); text-align: center; border-radius: 4px; font-size: 14px;  margin-bottom: 10px;"><?php if (isset($_GET['res'])) {
+																																															echo  $res = urldecode($_GET['res']);
+																																														}
+																																														?></div>
+						<div class="error-text"></div>
+						<div class="name-details">
+							<div class="field input">
+								<label>Name</label>
+								<input type="text" name="fname" class="form-login" placeholder="Your name" required>
+							</div>
+							<div class="field input">
+								<label>Last name</label>
+								<input type="text" name="lname" class="form-login" placeholder="Your last name" required>
+							</div>
+						</div>
+						<div class="field input">
+							<label>Email</label>
+							<input type="text" name="email" class="form-login" placeholder="youremail@example.com" required>
+						</div>
+						<div class="field input">
+							<label>Password</label>
+							<input type="password" name="password" class="form-login" placeholder="Your password" required>
+							<i class="fas fa-eye"></i>
+						</div>
+						<div class="field image">
+							<label>Your photo profile</label>
+							<div class="img_options">
+								<label for="file-upload" class="custom-file-input" id="file-label" style="color: white;">Choose file</label>
+								<input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" id="file-upload" class="hidden-input" onchange="showFileName(event)" required>
+								<span id="file-name">No file selected</span>
+							</div>
+						</div>
+						<div class="field button input grupo_button">
+							<input class="btn-login" type="submit" name="submit" value="SIGN UP" class="input_go">
+						</div>
+					</form>
+					<div class="form-groups opcion">
+						<p class="opcion-registro">Don't have an account? <br><a href="./">SIGN IN</a> </p>
+					</div>
+					<div class="form-groups copy_form">
+						<span class="copy">Copyright © Conectado 2023 </span>
+					</div>
+
+				</section>
+			</div>
 		</div>
 	</div>
-	</div>
+	<script>
+		function showFileName() {
+			const fileInput = document.getElementById("file-upload");
+			const fileNameDisplay = document.getElementById("file-name");
+
+			if (fileInput.files.length > 0) {
+				fileNameDisplay.textContent = fileInput.files[0].name;
+			} else {
+				fileNameDisplay.textContent = "No file selected";
+			}
+		}
+	</SCript>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

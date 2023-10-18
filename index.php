@@ -6,15 +6,20 @@ include('page-master/head.php');
 $loginError = '';
 if (!empty($_POST['username']) && !empty($_POST['pwd'])) {
 	include('Chat.php');
+	$email_encode = base64_encode($_POST['username']);
 	$chat = new Chat();
 	$user = $chat->loginUsers($_POST['username'], md5($_POST['pwd'])); // Verificar la contraseña con md5
 	if (!empty($user)) {
-		$_SESSION['username'] = $user[0]['username'];
-		$_SESSION['userid'] = $user[0]['userid'];
-		$chat->updateUserOnline($user[0]['userid'], 1);
-		$lastInsertId = $chat->insertUserLoginDetails($user[0]['userid']);
-		$_SESSION['login_details_id'] = $lastInsertId;
-		header("Location: conectado");
+		if ($user[0]['is_verified'] == 1) {
+			$_SESSION['username'] = $user[0]['username'];
+			$_SESSION['userid'] = $user[0]['userid'];
+			$chat->updateUserOnline($user[0]['userid'], 1);
+			$lastInsertId = $chat->insertUserLoginDetails($user[0]['userid']);
+			$_SESSION['login_details_id'] = $lastInsertId;
+			header("Location: conectado");
+		} else {
+			header("Location: verify?asc=" . $email_encode);
+		}
 	} else {
 		$loginError = "User and passowrd invalid";
 	}
@@ -23,7 +28,7 @@ if (!empty($_POST['username']) && !empty($_POST['pwd'])) {
 
 <body>
 	<div class="container-login">
-		
+
 		<div class="login-form">
 			<div class="form-login-container">
 				<!-- <div>
@@ -55,7 +60,7 @@ if (!empty($_POST['username']) && !empty($_POST['pwd'])) {
 						</div>
 					</div>
 					<div class="form-groups">
-						<hr class="linea_home" >
+						<hr class="linea_home">
 					</div>
 					<div class="form-groups grupo_button">
 						<button type="submit" name="login" class="btn-login">SIGN IN</button>
@@ -65,8 +70,8 @@ if (!empty($_POST['username']) && !empty($_POST['pwd'])) {
 					<p class="opcion-registro">Don't have an account? <br><a href="./register">SIGN UP</a> </p>
 				</div>
 				<div class="form-groups copy_form">
-						<span class="copy">Copyright © Conectado 2023 </span>
-					</div>
+					<span class="copy">Copyright © Conectado 2023 </span>
+				</div>
 			</div>
 		</div>
 	</div>
