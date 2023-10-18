@@ -1074,9 +1074,15 @@ h2 {
 }
 
 .error_send {
-    background-color: var(--color-error);
+    background-color: var(--color-error) !important;
 }
-
+.error_border{
+    border: none !important;
+    color: white !important;
+}
+.error_border:hover .error_border:active{
+    border: none !important;
+}
 .success_send {
     background-color: var(--color-en-linea);
 }

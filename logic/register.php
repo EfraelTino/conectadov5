@@ -98,7 +98,7 @@ if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password)) {
                                     $mail->SMTPAuth = true;
                                     $mail->Username = 'noreply@puntoarcade.com';
                                     $mail->Password = 'Cocorilow.1';
-                                    $mail->setFrom('noreply@puntoarcade.com', 'conectado.com');
+                                    $mail->setFrom('noreply@puntoarcade.com', 'puntoarcade.com');
                                     //$mail->addReplyTo('noreply@puntoarcade.com', 'VIVO app');
                                     $mail->addAddress($email, 'TU REGISTRO vivo ESTA CREADO!!!');
                                     $mail->Subject = 'Conectado Verification';

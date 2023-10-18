@@ -4,14 +4,17 @@ include "Chat.php";
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-require 'vendor/autoload.php';
+require './vendor/autoload.php';
 $chat = new Chat();
+if (isset($_GET['corto'])) {
+    $mandar_mensaje = $_GET['corto'];
+}
 
-if (isset($_GET['asc'])) { // Cambiado de $_POST a $_GET
-    $email = $_GET['asc']; // Cambiado de $_POST a $_GET
+if (isset($_GET['asc'])) {
+    $email = $_GET['asc'];
 
     $email_decode = base64_decode($email);
-    $decodedEmail = $chat->dbConnect->real_escape_string($email_decode); // Escapar caracteres especiales
+    $decodedEmail = $chat->dbConnect->real_escape_string($email_decode);
     $select_sql2 = "SELECT * FROM chat_users WHERE username = '$decodedEmail'";
     $result = $chat->dbConnect->query($select_sql2);
     if ($result) {
@@ -90,13 +93,20 @@ if (isset($_GET['asc'])) { // Cambiado de $_POST a $_GET
                     echo "Error: " . $mail->ErrorInfo;
                     // header("Location: count_confirmation?verify=$nb&sms=$encod_sms");
                 } else {
-
-                    // 2 -> success
-                    $nb = 2;
-                    $encod_nb = base64_encode($nb);
-                    $sms =   'A confirmation message was sent to your email, confirm your email and log in';
-                    $encod_sms = base64_encode($sms);
-                    header("Location: account_confirmation?verify=$nb&sms=$encod_sms");
+                    if (isset($mandar_mensaje)) {
+                        $corto = $_GET['corto'];
+                        $mensaje1 = "A confirmation message was sent to your email, confirm your email and log in";
+                        if ($corto == 2) {
+                            header("Location: index?mensaje=$mensaje1");
+                        }
+                    } else {
+                        $nb = 2;
+                        $encod_nb = base64_encode($nb);
+                        $sms =   'A confirmation message was sent to your email, confirm your email and log in';
+                        $encod_sms = base64_encode($sms);
+                        header("Location: account_confirmation?verify=$nb&sms=$encod_sms");
+                        // echo "ESTA ENTRANDO AL 2 -> SUCCESS";
+                    }
                 }
             }
         } else {

@@ -15,7 +15,7 @@ if (isset($_GET['verify'])  && isset($_GET['sms'])) {
             $email_enc = $_GET['as'];
             $email = base64_decode($email_enc);
         }
-    }else {
+    } else {
         header('location : index');
     }
 } else {
@@ -70,9 +70,9 @@ include('page-master/js.php');
                 if ($execute->num_rows > 0) {
                     $row = $execute->fetch_assoc();
                     $is_verified = $row['is_verified'];
-                    $userid= $row['userid'];
-                    if ($is_verified == 0) { 
-                        $verificar=1;
+                    $userid = $row['userid'];
+                    if ($is_verified == 0) {
+                        $verificar = 1;
                         $sql_up = "UPDATE chat_users SET is_verified = ? WHERE userid= ?";
                         $execute = $chat->dbConnect->prepare($sql_up);
                         if (!$execute) {
@@ -80,7 +80,7 @@ include('page-master/js.php');
                         }
                         $execute->bind_param('ii', $verificar, $userid);
                         $execute->execute();
-                        ?>
+                ?>
                         <div class="form-login-container">
                             <div>
                                 <div class="form-groups">
@@ -123,7 +123,7 @@ include('page-master/js.php');
 
         </div>
 
-
-        <?php
-        include "page-master/footer.php";
-        ?>
+    </div>
+    <?php
+    include "page-master/footer.php";
+    ?>

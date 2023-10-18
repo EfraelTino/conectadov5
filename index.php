@@ -18,7 +18,7 @@ if (!empty($_POST['username']) && !empty($_POST['pwd'])) {
 			$_SESSION['login_details_id'] = $lastInsertId;
 			header("Location: conectado");
 		} else {
-			header("Location: verify?asc=" . $email_encode);
+			header("Location: verify?asc=" . $email_encode . "&corto=2");
 		}
 	} else {
 		$loginError = "User and passowrd invalid";
@@ -39,8 +39,11 @@ if (!empty($_POST['username']) && !empty($_POST['pwd'])) {
 				<form method="post">
 					<div class="form-groups">
 						<?php if ($loginError) { ?>
-							<div class="alert-error"><?php echo $loginError; ?></div>
+							<div class="alert-error"><?php echo $loginError;?></div>
+						<?php } else if (isset($_GET['mensaje'])) { ?>
+							<div class="alert-error"><?php echo $_GET['mensaje'];?></div>
 						<?php } ?>
+
 					</div>
 					<div class="form-groups">
 						<label for="username">Email</label>
