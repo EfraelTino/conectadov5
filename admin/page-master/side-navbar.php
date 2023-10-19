@@ -33,6 +33,18 @@
                         <div class="side-menu__title">Suggestion box</div>
                     </a>
                 </li>
+                <li>
+                    <a href="advertising" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title">Advertising</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="messages" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>
+                        <div class="side-menu__title">Global message</div>
+                    </a>
+                </li>
                 <!-- <li>
                             <a href="side-menu-dark-dashboard-overview-4.html" class="side-menu side-menu--active">
                                 <div class="side-menu__icon"> <i data-lucide="activity"></i> </div>

@@ -153,4 +153,40 @@ class Chat
 			return false; // Error al eliminar el registro
 		}
 	}
+	public function deletePubli($id)
+	{
+		$sql ="DELETE FROM publicidad WHERE id= $id";
+        if (mysqli_query($this->dbConnect, $sql)) {
+			return true; // Éxito al eliminar el registro
+		} else {
+			return false; // Error al eliminar el registro
+		}
+	}
+	public function addAdver($ima_1, $ima_2)
+	{
+		$sql= "INSERT INTO  publicidad (public1, public2) values ('$ima_1', '$ima_2')";
+		mysqli_query($this->dbConnect, $sql);
+		$insert = mysqli_insert_id($this->dbConnect);
+		return $insert;
+	}
+	public function updateMessage($mesage)
+	{
+		$sql = "UPDATE  chat_users SET mensaje = ?";
+		$stmt = mysqli_prepare($this->dbConnect, $sql);
+		mysqli_stmt_bind_param($stmt, "s", $mesage);
+		$result = mysqli_stmt_execute($stmt);
+		mysqli_stmt_close($stmt);
+	}
+	public function updateSms()
+{
+    $sql = "UPDATE chat_users SET mensaje = ''";
+    $stmt = mysqli_prepare($this->dbConnect, $sql);
+    if (mysqli_stmt_execute($stmt)) {
+        mysqli_stmt_close($stmt);
+        return true; // La actualización se realizó correctamente
+    } else {
+        mysqli_stmt_close($stmt);
+        return false; // Error en la actualización
+    }
+}
 }

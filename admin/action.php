@@ -104,4 +104,23 @@ if(isset($_GET['action']) && $_GET['action'] =='eliminarvideo'){
         echo "error";
     }
 }
+if(isset($_GET['action']) && $_GET['action'] =='deletePubli'){
+    $id=$_GET['id'];
+    $ejecutar= $chat->deletePubli($id);
+    if($ejecutar){
+        header("location: advertising");
+    }else{
+        echo "error";
+    }
+}
+if(isset($_GET['action']) && $_GET['action'] == 'deletemessage')
+{
+    $ejecutar = $chat->updateSms();
+    if($ejecutar){
+        header("location: messages");
+    }else{
+        echo "error";
+    }
+}
+
 ?>
