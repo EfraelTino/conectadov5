@@ -199,7 +199,7 @@
                             <p class="prev_text email_t text_source">Your materials</p>
                         </div>
                         <div>
-                        <embed src="archivos/recurso1.pdf" type="application/pdf" width="100%" height="720">
+                        <embed id="pdf_mostrar" src="archivos/recurso1.pdf" type="application/pdf" width="100%" height="720">
                         </div>
                         <div class="container-items" style="text-align: center;">
                             <a href="archivos/recurso1.pdf" id="content_source" style="text-align: center;" download>Download PDF</a>

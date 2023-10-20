@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // botones para traer pdf
   const btnAntesSrc = document.getElementById('btnAntesSrc');
   const btnSiguienteSrc = document.getElementById('btnSiguienteSrc');
+  const pdf_mostrar= document.getElementById("pdf_mostrar");
 
   // creo una lista de videos que estan en la carpeta video
   const recursos = ['archivos/recurso1.pdf', 'archivos/recurso2.pdf', 'archivos/recurso3.pdf'];
@@ -19,11 +20,14 @@ document.addEventListener('DOMContentLoaded', function () {
   function siguienteRecurso() {
     indexsrc = (indexsrc + 1) % videostotal.length;
     content_source.href = recursos[indexsrc];
+    pdf_mostrar.src=recursos[indexsrc];
   }
 
   function anteriorRecurso (){
     indexsrc = (indexsrc - 1) % videostotal.length;
     content_source.href = recursos[indexsrc];
+    pdf_mostrar.src=recursos[indexsrc];
+
   }
   function reproducirSiguienteVideo() {
     indexVideo = (indexVideo + 1) % videostotal.length;
